@@ -1,0 +1,41 @@
+.te-explorer {
+    position: fixed;
+    background-color: white;
+    top: 228px;
+    left: 1303px;
+    margin-left: -350px;
+    z-index: 2100000003;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 8px 12px;
+    border-radius: 3px;
+    width: 300px;
+    height: 700px;
+}
+
+.control-panel {
+    width: 300px;
+    height: 20px;
+}
+
+.res-text{
+    font-size:18px;
+}
+
+.google-auto {
+    font-size: 18px;
+}
+
+.youtube-auto {
+    font-size: 18px;
+}
+
+.yandex-auto {
+    font-size: 18px;
+}
+
+
+.close-control {
+    float: right;
+    text-align: right;
+    position: relative;
+}
