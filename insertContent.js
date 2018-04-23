@@ -16,7 +16,7 @@
                     dataType: "json",
                     success: function (data) {
                         for (var i in data.items[0].snippet.tags) {
-                            allTags.push(data.items[0].snippet.tags[i])
+                            allTags.push(data.items[0].snippet.tags[i]);
                         }
                     }
                 });
@@ -55,9 +55,23 @@
         });
     }
 
+    function relatedTrands(query) {
+        $.getJSON('https://trendsnodeservice.azurewebsites.net/trends?keyword=' + query , function (data) {
+
+            var topFiveTags = "Гугл Тренды: \n";
+            for (let i = 0; i < 5; i++) {
+                if (data.length <= i)
+                    break;
+                topFiveTags += data[i].query + " " + data[i].value + " \n";
+            }
+
+            $(".google-trends").html(topFiveTags);
+        });
+    }
+
     function showRes(query, topFive) {
 
-        var TopFiveResult = "Топ пять тэгов для " + query + ": \n"
+        var TopFiveResult = "Топ пять тэгов для " + query + ": \n";
         for (var i in topFive) {
             TopFiveResult += '\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз\n";
         }
@@ -67,31 +81,31 @@
     function searchGoogleAutoComplete(val,type ="") {
 
         var xhr = new XMLHttpRequest();
-        var url = "https://suggestqueries.google.com/complete/search?client=firefox&q=" + val
+        var url = "https://suggestqueries.google.com/complete/search?client=firefox&q=" + val;
 
         if (type == "youtube") {
-            url += "&ds=yt"
+            url += "&ds=yt";
         }
         xhr.open("GET", url, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 displayAC(JSON.parse(this.responseText), type);
             }
-        }
+        };
         xhr.send();
     }
 
     function searchYandexAutoComplete(val) {
 
         var xhr = new XMLHttpRequest();
-        var url = "https://suggest.yandex.ru/suggest-ya.cgi?v=4&part=" + val
+        var url = "https://suggest.yandex.ru/suggest-ya.cgi?v=4&part=" + val;
 
         xhr.open("GET", url, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 displayAC(JSON.parse(this.responseText), "yandex");
             }
-        }
+        };
         xhr.send();
     }
 
@@ -141,6 +155,8 @@
                 searchGoogleAutoComplete(searchVal);
                 searchGoogleAutoComplete(searchVal, "youtube");
                 searchYandexAutoComplete(searchVal);
+
+                relatedTrands(searchVal);
             }
 
         });
