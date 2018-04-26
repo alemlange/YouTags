@@ -164,6 +164,33 @@
         $(".close-control").on("click", function () {
             $(".te-explorer").hide();
         });
+
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
+                datasets: [{
+                    label:"Популярность",
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor:  'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255,99,132,1)',
+
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize:20
+                        }
+                    }]
+                }
+            }
+        });
     }
 
     function tryLoad(content, tries) {
@@ -183,6 +210,8 @@
     $.get(chrome.extension.getURL('/tagview.html'), function (data) {
         tryLoad(data, 1);
     });
+
+    
 });
 
     

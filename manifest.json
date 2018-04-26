@@ -20,7 +20,7 @@
   "content_scripts": [
     {
       "matches": [ "https://www.youtube.com/*" ],
-      "js": [ "jquery.js", "jquery-ui.min.js", "insertContent.js" ],
+      "js": [ "jquery.js", "jquery-ui.min.js", "Chart.min.js","insertContent.js" ],
       "css": [ "tagstyle.css" ]
     }
   ],

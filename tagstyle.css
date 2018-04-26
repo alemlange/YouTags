@@ -12,6 +12,11 @@
     height: 400px;
 }
 
+.trends-chart {
+    width: 500px !important;
+    height: 250px !important;
+}
+
 .control-panel {
     width: 600px;
     height: 20px;
