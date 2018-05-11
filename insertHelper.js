@@ -139,94 +139,30 @@
     function loadData(domQuery, data) {
         domQuery.prepend(data);
 
-        $(".te-explorer").draggable();
-
-        $(".open-tags").on("click", function () {
-            $(".te-explorer").show();
-        });
-
-        $(".te-find").on("click", function (e) {
-
-            var searchVal = $(".te-tag-input").val();
-
-            if (searchVal != undefined && searchVal != "") {
-                TopFiveTags(searchVal, showRes);
-
-                searchGoogleAutoComplete(searchVal);
-                searchGoogleAutoComplete(searchVal, "youtube");
-                searchYandexAutoComplete(searchVal);
-
-                relatedTrands(searchVal);
-            }
-
-        });
-
-        $(".close-control").on("click", function () {
-            $(".te-explorer").hide();
-        });
-
-        $(".js-next-step").on("click", function () {
-
-            var curStep = $(".steps-container").data("curstep");
-            
-            if (curStep >= 10)
-                curStep = 1;
-            else
-                curStep++;
-            $(".steps-container").data("curstep", curStep);
-
-            $(".step").hide();
-            $(".step[data-stepnum='" + curStep + "']").show();
-
-        });
-
-        //var ctx = document.getElementById("myChart").getContext('2d');
-        //var myChart = new Chart(ctx, {
-        //    type: 'line',
-        //    data: {
-        //        labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
-        //        datasets: [{
-        //            label:"Популярность",
-        //            data: [12, 19, 3, 5, 2, 3],
-        //            backgroundColor:  'rgba(255, 99, 132, 0.2)',
-        //            borderColor: 'rgba(255,99,132,1)',
-
-        //            borderWidth: 2
-        //        }]
-        //    },
-        //    options: {
-        //        scales: {
-        //            yAxes: [{
-        //                ticks: {
-        //                    max: 100,
-        //                    min: 0,
-        //                    stepSize:20
-        //                }
-        //            }]
-        //        }
-        //    }
-        //});
     }
 
-    function tryLoad(content, tries) {
+    function tryLoad(content, tries, intoSelector) {
         if (tries > 3)
             return;
 
-        var place = $("#yt-masthead-user");
+        var place = $("#active-uploads-contain").find(intoSelector);
 
         if (place.length != 0) {
             loadData(place, content);
         } else {
             tries++;
-            setTimeout(tryLoad, 1000, content, tries);
+            setTimeout(tryLoad, 1000, content, tries, intoSelector);
         }
     }
 
-    $.get(chrome.extension.getURL('/tagview.html'), function (data) {
-        tryLoad(data, 1);
+
+    $.get(chrome.extension.getURL('/uploadHelper.html'), function (data) {
+        tryLoad(data, 1, ".yt-uix-form-input-container.yt-uix-form-input-textarea-container");
     });
 
-    
+    //$.get(chrome.extension.getURL('/ytButton.html'), function (data) {
+    //    tryLoad(data, 1, "#yt-masthead-user");
+    //});
 });
 
     

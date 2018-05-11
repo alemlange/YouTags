@@ -8,8 +8,31 @@
     border: 1px solid rgb(204, 204, 204);
     padding: 8px 12px;
     border-radius: 3px;
-    width: 600px;
+    width: 620px;
     height: 400px;
+}
+
+.check-container {
+    border-right: black;
+    border-right-style: groove;
+    border-right-width: 1px;
+    height: 330px;
+}
+
+.steps-container {
+    text-align:center;
+}
+
+.step-name{
+    margin-bottom:10px;
+}
+
+.step-guidance {
+    height: 260px;
+}
+
+.check-li {
+    margin-bottom:5px;
 }
 
 .trends-chart {
@@ -19,7 +42,7 @@
 
 .control-panel {
     width: 600px;
-    height: 20px;
+    height: 40px;
 }
 
 .res-text{

@@ -1,10 +1,10 @@
-{
-  "name": "Getting Started Example",
+﻿{
+  "name": "YouTube Tags Helper",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Помогает в создании видео",
   "permissions": [ "tabs", "declarativeContent", "storage", "https://suggestqueries.google.com/", "https://suggest.yandex.ru/", "https://trendsnodeservice.azurewebsites.net/" ],
   "background": {
-    "scripts": [ "background.js" ],
+    "scripts": [ "background.js"],
     "persistent": false
   },
   "options_page": "options.html",
@@ -19,10 +19,16 @@
   },
   "content_scripts": [
     {
-      "matches": [ "https://www.youtube.com/*" ],
-      "js": [ "jquery.js", "jquery-ui.min.js", "Chart.min.js","insertContent.js" ],
-      "css": [ "tagstyle.css" ]
+      "matches": [ "https://www.youtube.com/upload*" ],
+      "js": [ "jquery.js", "jquery-ui.min.js", "Chart.min.js", "bootstrap.min.js", "insertContent.js" ],
+      "css": [ "bootstrap.min.css", "tagstyle.css" ]
     }
+    //},
+    //{
+    //  "matches": [ "https://www.youtube.com/upload*" ],
+    //  "js": [ "jquery.js", "jquery-ui.min.js", "Chart.min.js", "bootstrap.min.js", "insertHelper.js" ],
+    //  "css": [ "bootstrap.min.css", "tagstyle.css" ]
+    //}
   ],
   "icons": {
     "16": "images/get_started16.png",
@@ -31,5 +37,5 @@
     "128": "images/get_started128.png"
   },
   "manifest_version": 2,
-  "web_accessible_resources": [ "tagview.html" ]
+  "web_accessible_resources": [ "tagview.html", "uploadHelper.html", "ytButton.html" ]
 }
