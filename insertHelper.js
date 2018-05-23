@@ -75,7 +75,7 @@
         for (var i in topFive) {
             TopFiveResult += '\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз\n";
         }
-        $(".res-text").html(TopFiveResult);
+        $(".popular-youtube").html(TopFiveResult);
     }
 
     function searchGoogleAutoComplete(val,type ="") {

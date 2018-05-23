@@ -8,19 +8,34 @@
     border: 1px solid rgb(204, 204, 204);
     padding: 8px 12px;
     border-radius: 3px;
-    width: 620px;
+    width: 350px;
     height: 400px;
+    /*overflow:hidden;*/
 }
 
 .check-container {
     border-right: black;
     border-right-style: groove;
     border-right-width: 1px;
-    height: 330px;
+    height: 300px;
+}
+
+.list-element {
+    margin-bottom: 8px;
 }
 
 .steps-container {
-    text-align:center;
+    overflow: auto;
+    height: 340px;
+}
+
+.step-checkbox {
+    margin-right: 5px;
+}
+
+.results {
+    overflow: auto;
+    height: 295px;
 }
 
 .step-name{
@@ -28,7 +43,7 @@
 }
 
 .step-guidance {
-    height: 260px;
+    /*height: 260px;*/
 }
 
 .check-li {
@@ -41,30 +56,45 @@
 }
 
 .control-panel {
-    width: 600px;
-    height: 40px;
+    /*width: 400px;*/
+    border-bottom: solid 1px;
+    height: 25px;
+    margin-bottom: 15px;
 }
 
-.res-text{
-    font-size:18px;
+.popular-youtube {
+    list-style-type: disc;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.popular-youtube li{
+    margin-left: 20px;
 }
 
 .google-auto {
-    font-size: 18px;
+    list-style-type: disc;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .youtube-auto {
-    font-size: 18px;
+    list-style-type: disc;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .yandex-auto {
-    font-size: 18px;
+    list-style-type: disc;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .google-trends {
-    font-size: 18px;
+    list-style-type: disc;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
-
 
 .close-control {
     float: right;

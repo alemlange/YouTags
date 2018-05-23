@@ -1,30 +1,17 @@
-﻿<button class="open-tags">YT</button>
+﻿<button class="open-tags btn btn-info">YT</button>
 
 <div style="display: none;" class="draggable-container te-explorer">
 
     <div class="control-panel">
-        <button class="close-control btn btn-info btn-sm" >x</button>
+        <a href="#" class="tag-control ">Поиск тегов</a>
+        <a href="#" class="check-control ">Чек Лист</a>
+        <a href="#" class="close-control ">x</a>
     </div>
-    <div class="row">
-        <div class="col-md-4 check-container">
-            <h3>Чек-лист</h3>
-            <ul>
-                <li class="check-li"><input type="checkbox"><a href="#">Write a Compelling Title</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Enter a Complete Description</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Add Descriptive Tags</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Create a Custom Thumbnail</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Monetize / Adv. Settings</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Add Info Cards</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Add to Playlist(s)</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Engage with the Video</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Promote Across Existing Videos</a></li>
-                <li class="check-li"><input type="checkbox"><a href="#">Share on Social Media</a></li>
-            </ul>
-        </div>
-        <div class="col-md-8 steps-container" data-curstep="1">
 
-            <div class="step" data-stepnum="1">
-                <h2 class="step-name">Write a Compelling Title</h2>
+    <div id="check-list-row" class="steps-container">
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Write a Compelling Title</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
+            <div class="step" data-stepnum="1" style="display: none;">
                 <p class="step-guidance">
                     This is your video's headline. If it showed up in a search, would you click on it?
                     Always represent your content accurately.
@@ -33,9 +20,11 @@
                     Update video titles so they continue to grab views..
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Enter a Complete Description</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="2" style="display: none;">
-                <h2 class="step-name">Enter a Complete Description</h2>
                 <p class="step-guidance">
                     Only the first few sentences of your description will appear in search results or above the fold on a watch page - so make them count!
                     Follow a template for all of your video descriptions to create consistency.
@@ -46,9 +35,11 @@
                     Include your channel's release schedule.
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Add Descriptive Tags</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="3" style="display: none;">
-                <h2 class="step-name">Add Descriptive Tags</h2>
                 <p class="step-guidance">
                     Tags are descriptive keywords that will help people find your videos.
                     Create a set of standard tags for your channel that can be applied to any video you publish (e.g. filmmaking, animation, comedy, "Funny Videos," "Pet Videos," etc).
@@ -60,9 +51,11 @@
                     List them in order of relevance to the video and try to use the whole 500-character limit.
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Create a Custom Thumbnail</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="4" style="display: none;">
-                <h2 class="step-name">Create a Custom Thumbnail</h2>
                 <p class="step-guidance">
                     Thumbnails show up in different sizes and formats all across the YouTube platform and outside of it.
                     Make sure you've got a strong, vibrant image that pops no matter what size it is.
@@ -74,18 +67,22 @@
                     Bright, high-contrast and close-ups of faces tend to work better.
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Monetize / Adv. Settings</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="5" style="display: none;">
-                <h2 class="step-name">Monetize / Adv. Settings</h2>
                 <p class="step-guidance">
                     Enable ad types that perform best on your channel in order to maximize revenue.
                     Use YouTube Analytics to determine which Ad Types give you the highest CPM.
                     Make sure comments are enabled (unless you have a specific reason to disable them) in order to promote discussion.
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Add Info Cards</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="6" style="display: none;">
-                <h2 class="step-name">Add Info Cards</h2>
                 <p class="step-guidance">
                     Cards are a way to complement your video's content and enhance the viewer experience with contextually relevant information.
                     They are a great way to encourage your viewers to engage with your video and take meaningful actions as a result.
@@ -96,9 +93,11 @@
                     Drive viewers to your other videos, playlists and channels as well as merchandise.
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Add to Playlist(s)</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="7" style="display: none;">
-                <h2 class="step-name">Add to Playlist(s)</h2>
                 <p class="step-guidance">
                     Playlists make it easy for viewers to sit back and watch multiple videos of yours with minimal effort which increases views and watch time for your channel.
 
@@ -107,9 +106,11 @@
                     Create a new Playlist if this video doesn't fit into your existing Playlists
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Engage with the Video</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="8" style="display: none;">
-                <h2 class="step-name">Engage with the Video</h2>
                 <p class="step-guidance">
                     Get the conversation started and pointed in the right direction.
                     Be the first to comment on your video and ignite discussion
@@ -117,18 +118,22 @@
                     Get your friends or colleagues in early to engage as well
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Promote Across Existing Videos</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="9" style="display: none;">
-                <h2 class="step-name">Promote Across Existing Videos</h2>
                 <p class="step-guidance">
                     Use your existing videos to drive traffic to this new upload for an initial boost.
                     Add an Info Card and or Description Links across all your videos to this new upload.
                     TubeBuddy's Vid2Vid Promotions will help you accomplish this across your entire channel in seconds.
                 </p>
             </div>
+        </div>
 
+        <div class="list-element">
+            <input type="checkbox" class="step-checkbox"><span>Share on Social Media</span><img style="height:10px; position:relative; opacity:.6; top:4px; float:right; margin-right:4px;" src="https://www.tubebuddy.com/images/icons/caret-down.png">
             <div class="step" data-stepnum="10" style="display: none;">
-                <h2 class="step-name">Share on Social Media</h2>
                 <p class="step-guidance">
                     Use social media to improve your content's discoverability and interact withyour audience on multiple platforms.
                     Share on Twitter.com
@@ -136,39 +141,31 @@
                     Share on Instagram.com
                 </p>
             </div>
-
-
-            <a href="#" class="btn btn-info js-next-step">Вперед</a>
         </div>
     </div>
 
-    <!--<div id="tags">
+    <div id="tag-row" style="display: none;">
+
         <input class="te-tag-input" placeholder="Поиск тегов" />
-        <button class="te-find">Go</button>
+        <a class="te-find btn">Go</a>
 
-        <canvas id="myChart" class="trends-chart"></canvas>
-
+        <!--<canvas id="myChart" class="trends-chart"></canvas>-->
         <div class="results">
-            <div class="row">
-                <div class="te-result col-md-3">
-                    <p class="res-text"></p>
-                </div>
-                <div class="google-auto  col-md-3">
 
-                </div>
-                <div class="youtube-auto  col-md-3">
+            <span>Популярные теги</span>
+            <ul class="popular-youtube"></ul>
 
-                </div>
-                <div class="yandex-auto  col-md-3">
+            <span>Популярные теги</span>
+            <ul class="google-trends "></ul>
 
-                </div>
-            </div>
-            <div class="row">
-                <div class="google-trends  col-md-12">
+            <span>Гугл предлагает</span>
+            <ul class="google-auto"></ul>
 
-                </div>
-            </div>
+            <span>Ютуб Предлагает</span>
+            <ul class="youtube-auto"></ul>
+
+            <span>Яндекс предлагает</span>
+            <ul class="yandex-auto"></ul>
         </div>
-    </div>-->
-
+    </div>
 </div>

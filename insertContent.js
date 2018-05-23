@@ -58,11 +58,11 @@
     function relatedTrands(query) {
         $.getJSON('https://trendsnodeservice.azurewebsites.net/trends?keyword=' + query , function (data) {
 
-            var topFiveTags = "Гугл Тренды: \n";
+            var topFiveTags = "";
             for (let i = 0; i < 5; i++) {
                 if (data.length <= i)
                     break;
-                topFiveTags += data[i].query + " " + data[i].value + " \n";
+                topFiveTags += "<ul>" + data[i].query + " " + data[i].value +"</ul>";
             }
 
             $(".google-trends").html(topFiveTags);
@@ -71,11 +71,11 @@
 
     function showRes(query, topFive) {
 
-        var TopFiveResult = "Топ пять тэгов для " + query + ": \n";
+        var TopFiveResult = "";
         for (var i in topFive) {
-            TopFiveResult += '\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз\n";
+            TopFiveResult += "<li>"+'\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз"+"</li>";
         }
-        $(".res-text").html(TopFiveResult);
+        $(".popular-youtube").html(TopFiveResult);
     }
 
     function searchGoogleAutoComplete(val,type ="") {
@@ -116,20 +116,20 @@
         var container;
         var resString;
         if (type == "youtube") {
-            resString = "Ютуб предлагает: ";
+            resString = "";
             container = $(".youtube-auto");
         }
         else if (type == "yandex") {
-            resString = "Яндекс предлагает: ";
+            resString = "";
             container = $(".yandex-auto");
         }
         else {
-            resString = "Гугл предлагает: ";
+            resString = "";
             container = $(".google-auto");
         }
 
         for (let i in results) {
-            resString += results[i]+", ";
+            resString += "<ul>" + results[i] +"</ul>";
         }
 
         container.html(resString);
@@ -146,6 +146,7 @@
         });
 
         $(".te-find").on("click", function (e) {
+            e.preventDefault();
 
             var searchVal = $(".te-tag-input").val();
 
@@ -161,7 +162,9 @@
 
         });
 
-        $(".close-control").on("click", function () {
+        $(".close-control").on("click", function (e) {
+            e.preventDefault();
+
             $(".te-explorer").hide();
         });
 
@@ -178,6 +181,31 @@
             $(".step").hide();
             $(".step[data-stepnum='" + curStep + "']").show();
 
+        });
+
+        $(".tag-control").on("click", function (e) {
+            e.preventDefault();
+
+            $("#tag-row").show();
+            $("#check-list-row").hide();
+
+        });
+
+        $(".list-element").on("click", function (e) {
+            var text = $(this).find(".step");
+
+            if (text.is(":visible")) {
+                text.hide();
+            }
+            else
+                text.show();
+        });
+
+        $(".check-control").on("click", function (e) {
+            e.preventDefault();
+
+            $("#tag-row").hide();
+            $("#check-list-row").show();
         });
 
         //var ctx = document.getElementById("myChart").getContext('2d');
