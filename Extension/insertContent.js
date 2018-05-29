@@ -58,11 +58,11 @@
     function relatedTrands(query) {
         $.getJSON('https://trendsnodeservice.azurewebsites.net/trends?keyword=' + query , function (data) {
 
-            var topFiveTags = "Гугл Тренды: \n";
+            var topFiveTags = "";
             for (let i = 0; i < 5; i++) {
                 if (data.length <= i)
                     break;
-                topFiveTags += data[i].query + " " + data[i].value + " \n";
+                topFiveTags += "<ul>" + data[i].query + " " + data[i].value +"</ul>";
             }
 
             $(".google-trends").html(topFiveTags);
@@ -71,9 +71,9 @@
 
     function showRes(query, topFive) {
 
-        var TopFiveResult = "Топ пять тэгов для " + query + ": \n";
+        var TopFiveResult = "";
         for (var i in topFive) {
-            TopFiveResult += '\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз\n";
+            TopFiveResult += "<li>"+'\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз"+"</li>";
         }
         $(".popular-youtube").html(TopFiveResult);
     }
@@ -116,20 +116,20 @@
         var container;
         var resString;
         if (type == "youtube") {
-            resString = "Ютуб предлагает: ";
+            resString = "";
             container = $(".youtube-auto");
         }
         else if (type == "yandex") {
-            resString = "Яндекс предлагает: ";
+            resString = "";
             container = $(".yandex-auto");
         }
         else {
-            resString = "Гугл предлагает: ";
+            resString = "";
             container = $(".google-auto");
         }
 
         for (let i in results) {
-            resString += results[i]+", ";
+            resString += "<ul>" + results[i] +"</ul>";
         }
 
         container.html(resString);
@@ -139,30 +139,112 @@
     function loadData(domQuery, data) {
         domQuery.prepend(data);
 
+        $(".te-explorer").draggable();
+
+        $(".open-tags").on("click", function () {
+            $(".te-explorer").show();
+        });
+
+        $(".te-find").on("click", function (e) {
+            e.preventDefault();
+
+            var searchVal = $(".te-tag-input").val();
+
+            if (searchVal != undefined && searchVal != "") {
+                TopFiveTags(searchVal, showRes);
+
+                searchGoogleAutoComplete(searchVal);
+                searchGoogleAutoComplete(searchVal, "youtube");
+                searchYandexAutoComplete(searchVal);
+
+                relatedTrands(searchVal);
+            }
+
+        });
+
+        $(".close-control").on("click", function (e) {
+            e.preventDefault();
+
+            $(".te-explorer").hide();
+        });
+
+
+        $(".tag-control").on("click", function (e) {
+            e.preventDefault();
+
+            $(".section-link").removeClass("active");
+            $(this).addClass("active");
+            $("#tag-row").show();
+            $("#check-list-row").hide();
+
+        });
+
+        $(".check-control").on("click", function (e) {
+            e.preventDefault();
+
+            $(".section-link").removeClass("active");
+            $(this).addClass("active");
+            $("#tag-row").hide();
+            $("#check-list-row").show();
+        });
+
+        $(".list-element").on("click", function (e) {
+            var text = $(this).find(".step");
+
+            if (text.is(":visible")) {
+                text.hide();
+            }
+            else
+                text.show();
+        });
     }
 
-    function tryLoad(content, tries, intoSelector) {
+    function tryLoad(content, tries) {
         if (tries > 3)
             return;
 
-        var place = $("#active-uploads-contain").find(intoSelector);
+        var place = $("#yt-masthead-user");
 
         if (place.length != 0) {
             loadData(place, content);
         } else {
             tries++;
-            setTimeout(tryLoad, 1000, content, tries, intoSelector);
+            setTimeout(tryLoad, 1000, content, tries);
         }
     }
 
-
-    $.get(chrome.extension.getURL('/uploadHelper.html'), function (data) {
-        tryLoad(data, 1, ".yt-uix-form-input-container.yt-uix-form-input-textarea-container");
+    $.get(chrome.extension.getURL('/tagview.html'), function (data) {
+        tryLoad(data, 1);
     });
 
-    //$.get(chrome.extension.getURL('/ytButton.html'), function (data) {
-    //    tryLoad(data, 1, "#yt-masthead-user");
-    //});
+    
 });
+
+        //var ctx = document.getElementById("myChart").getContext('2d');
+        //var myChart = new Chart(ctx, {
+        //    type: 'line',
+        //    data: {
+        //        labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
+        //        datasets: [{
+        //            label:"Популярность",
+        //            data: [12, 19, 3, 5, 2, 3],
+        //            backgroundColor:  'rgba(255, 99, 132, 0.2)',
+        //            borderColor: 'rgba(255,99,132,1)',
+
+        //            borderWidth: 2
+        //        }]
+        //    },
+        //    options: {
+        //        scales: {
+        //            yAxes: [{
+        //                ticks: {
+        //                    max: 100,
+        //                    min: 0,
+        //                    stepSize:20
+        //                }
+        //            }]
+        //        }
+        //    }
+        //});
 
     
