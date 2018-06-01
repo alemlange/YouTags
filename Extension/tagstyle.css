@@ -6,7 +6,7 @@
     margin-left: -350px;
     z-index: 2100000003;
     border: 1px solid rgb(204, 204, 204);
-    padding: 1px 12px 8px 12px;
+    padding: 3px 12px 8px 12px;
     border-radius: 3px;
     width: 350px;
     height: 400px;
@@ -52,12 +52,26 @@ a {
     height: 340px;
 }
 
+.caret-down {
+    height: 10px;
+    position: relative;
+    opacity: .6;
+    top: 4px;
+    float: right;
+    margin-right: 4px;
+}
+
+.step-title {
+    font-size: 14px;
+    cursor: pointer;
+}
+
 .step-checkbox {
     margin-right: 5px;
 }
 
 .step-guidance {
-    /*height: 260px;*/
+    padding: 7px;
 }
 
 .check-li {
@@ -83,6 +97,31 @@ a {
     text-align: right;
     position: relative;
     margin-right:0px !important;
+}
+
+.te-tag-input {
+    width: 249px;
+    margin-right: 10px;
+    height: 29px;
+}
+
+.te-find {
+    height: 29px;
+    width: 61px;
+    background: url("http://trendsnodeservice.azurewebsites.net/images/search-sm.png");
+    background-position: 22px 6px;
+    background-repeat: no-repeat;
+}
+
+.search-img-section {
+    height: 313px;
+    width: 324px;
+    text-align: center;
+    padding: 75px;
+}
+
+.search-img-big {
+    margin-bottom: 20px;
 }
 
 .results {

@@ -1,7 +1,7 @@
 ﻿'use strict';
 module.exports = function (app) {
-    var todoList = require('../controllers/trendsController');
+    var trendsConroller = require('../controllers/trendsController');
 
     app.route('/trends')
-        .get(todoList.list_all_tasks);
+        .get(trendsConroller.list_all_tasks);
 };
