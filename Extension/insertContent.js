@@ -62,7 +62,7 @@
             for (let i = 0; i < 5; i++) {
                 if (data.length <= i)
                     break;
-                topFiveTags += "<ul>" + data[i].query + " " + data[i].value +"</ul>";
+                topFiveTags += "<li>" + data[i].query + " " + data[i].value +"</li>";
             }
 
             $(".google-trends").html(topFiveTags);
@@ -129,7 +129,7 @@
         }
 
         for (let i in results) {
-            resString += "<ul>" + results[i] +"</ul>";
+            resString += "<li>" + results[i] +"</li>";
         }
 
         container.html(resString);
@@ -148,8 +148,10 @@
         $(".te-find").on("click", function (e) {
             e.preventDefault();
 
-            var searchVal = $(".te-tag-input").val();
+            $(".search-img-section").hide();
+            $(".results").show();
 
+            var searchVal = $(".te-tag-input").val();
             if (searchVal != undefined && searchVal != "") {
                 TopFiveTags(searchVal, showRes);
 

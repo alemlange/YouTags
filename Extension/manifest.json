@@ -1,6 +1,6 @@
 ﻿{
-  "name": "YouTube Tags Helper",
-  "version": "1.0",
+  "name": "YouTags",
+  "version": "0.8",
   "description": "Помогает в создании видео",
   "permissions": [ "tabs", "declarativeContent", "storage", "https://suggestqueries.google.com/", "https://suggest.yandex.ru/", "https://trendsnodeservice.azurewebsites.net/" ],
   "background": {
@@ -11,31 +11,25 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+      "16": "images/yt16.png",
+      "32": "images/yt32.png",
+      "48": "images/yt48.png",
+      "128": "images/yt128.png"
     }
   },
   "content_scripts": [
     {
       "matches": [ "https://www.youtube.com/upload*" ],
-      "js": [ "jquery.js", "jquery-ui.min.js", "Chart.min.js", "bootstrap.min.js", "insertContent.js" ],
+      "js": [ "jquery.js", "jquery-ui.min.js", "bootstrap.min.js", "insertContent.js" ],
       "css": [ "bootstrap.min.css", "tagstyle.css" ]
     }
-    //},
-    //{
-    //  "matches": [ "https://www.youtube.com/upload*" ],
-    //  "js": [ "jquery.js", "jquery-ui.min.js", "Chart.min.js", "bootstrap.min.js", "insertHelper.js" ],
-    //  "css": [ "bootstrap.min.css", "tagstyle.css" ]
-    //}
   ],
   "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
+    "16": "images/yt16.png",
+    "32": "images/yt32.png",
+    "48": "images/yt48.png",
+    "128": "images/yt128.png"
   },
   "manifest_version": 2,
-  "web_accessible_resources": [ "tagview.html", "uploadHelper.html", "ytButton.html" ]
+  "web_accessible_resources": [ "tagview.html" ]
 }

@@ -195,6 +195,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Clients\Models\ParserResponce.cs" />
+    <Compile Include="Clients\Models\Wordstat_NResult.cs" />
+    <Compile Include="Clients\MutagenClient.cs" />
+    <Compile Include="Controllers\StatController.cs" />
     <Compile Include="Controllers\WordsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

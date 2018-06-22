@@ -13,6 +13,14 @@
     /*overflow:hidden;*/
 }
 
+.open-tags {
+    height: 28px;
+    width: 44px;
+    background: url("http://trendsnodeservice.azurewebsites.net/images/yt32.png");
+    background-position: 6px -2px;
+    background-repeat: no-repeat;
+}
+
 .check-container {
     border-right: black;
     border-right-style: groove;
@@ -113,6 +121,10 @@ a {
     background-repeat: no-repeat;
 }
 
+.search-control {
+    margin-bottom: 10px;
+}
+
 .search-img-section {
     height: 313px;
     width: 324px;
@@ -129,10 +141,24 @@ a {
     height: 295px;
 }
 
+.result-section{
+    margin: 0px 0px 10px 6px ;
+}
+
+.meter{
+    text-align:center;
+}
+
+.meter-count {
+    font-size: 22px;
+    color: green;
+}
+
 .popular-youtube {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
+    margin-left: 10px;
 }
 
 .popular-youtube li{
@@ -143,23 +169,44 @@ a {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.google-auto li {
+    margin-left: 20px;
 }
 
 .youtube-auto {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.youtube-auto li {
+    margin-left: 20px;
 }
 
 .yandex-auto {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.yandex-auto li {
+    margin-left: 20px;
 }
 
 .google-trends {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
+    margin-left: 10px;
 }
+
+.google-trends li {
+    margin-left: 20px;
+}
+
 
