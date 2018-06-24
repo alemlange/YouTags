@@ -136,10 +136,26 @@
 
     }
 
+    function performSearch() {
+        $(".search-img-section").hide();
+        $(".results").show();
+
+        var searchVal = $(".te-tag-input").val();
+        if (searchVal != undefined && searchVal != "") {
+            TopFiveTags(searchVal, showRes);
+
+            searchGoogleAutoComplete(searchVal);
+            searchGoogleAutoComplete(searchVal, "youtube");
+            searchYandexAutoComplete(searchVal);
+
+            relatedTrands(searchVal);
+        }
+    }
+
     function loadData(domQuery, data) {
         domQuery.prepend(data);
 
-        $(".te-explorer").draggable();
+        $(".te-explorer").draggable({ handle: ".control-panel" });
 
         $(".open-tags").on("click", function () {
             $(".te-explorer").show();
@@ -148,20 +164,13 @@
         $(".te-find").on("click", function (e) {
             e.preventDefault();
 
-            $(".search-img-section").hide();
-            $(".results").show();
+            performSearch();
+        });
 
-            var searchVal = $(".te-tag-input").val();
-            if (searchVal != undefined && searchVal != "") {
-                TopFiveTags(searchVal, showRes);
-
-                searchGoogleAutoComplete(searchVal);
-                searchGoogleAutoComplete(searchVal, "youtube");
-                searchYandexAutoComplete(searchVal);
-
-                relatedTrands(searchVal);
+        $(".te-tag-input").keypress(function (e) {
+            if (e.which == 13) {
+                performSearch();
             }
-
         });
 
         $(".close-control").on("click", function (e) {
@@ -190,14 +199,18 @@
             $("#check-list-row").show();
         });
 
-        $(".list-element").on("click", function (e) {
-            var text = $(this).find(".step");
+        $(".caret-down, .step-title").on("click", function (e) {
+            var container = $(this).parent();
+            var text = $(container).find(".step");
 
             if (text.is(":visible")) {
+                container.find(".caret-down").attr("src", "http://trendsnodeservice.azurewebsites.net/images/caret-down.png");
                 text.hide();
             }
-            else
+            else {
+                container.find(".caret-down").attr("src", "http://trendsnodeservice.azurewebsites.net/images/caret-up.png");
                 text.show();
+            }   
         });
     }
 
