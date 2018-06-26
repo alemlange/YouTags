@@ -109,6 +109,5 @@ C:\git\YouTags\AdWordsService\bin\System.Web.Http.xml
 C:\git\YouTags\AdWordsService\bin\System.Web.Http.WebHost.xml
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.csprojResolveAssemblyReference.cache
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.csproj.CoreCompileInputs.cache
-C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.csproj.CopyComplete
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.dll
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.pdb

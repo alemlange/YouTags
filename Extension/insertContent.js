@@ -51,7 +51,8 @@
                 topFiveTags.push(notUniqueTags[i]);
             }
 
-            callback(tagQuery, topFiveTags);
+            var totalResults = data.pageInfo.totalResults;
+            callback(tagQuery, topFiveTags, totalResults);
         });
     }
 
@@ -69,13 +70,22 @@
         });
     }
 
-    function showRes(query, topFive) {
+    function searchValueStats(query) {
+        $.getJSON('https://adwordsservice.azurewebsites.net/Stat/ParseKey?key=' + query, function (data) {
+
+            $(".search-value").find(".meter-count").html(data);
+        });
+    }
+
+    function showRes(query, topFive, totalResults) {
 
         var TopFiveResult = "";
         for (var i in topFive) {
             TopFiveResult += "<li>"+'\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз"+"</li>";
         }
         $(".popular-youtube").html(TopFiveResult);
+
+        $(".search-count").find(".meter-count").html(totalResults);
     }
 
     function searchGoogleAutoComplete(val,type ="") {
@@ -149,6 +159,9 @@
             searchYandexAutoComplete(searchVal);
 
             relatedTrands(searchVal);
+
+            searchValueStats(searchVal);
+
         }
     }
 
