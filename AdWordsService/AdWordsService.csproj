@@ -195,9 +195,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Clients\Enums\SearchValueQuality.cs" />
+    <Compile Include="Clients\Enums\VideoCountQuality.cs" />
     <Compile Include="Clients\Models\ParserResponce.cs" />
+    <Compile Include="Clients\Models\ParserResult.cs" />
+    <Compile Include="Clients\Models\SearchValueRow.cs" />
+    <Compile Include="Clients\Models\VideoCount.cs" />
     <Compile Include="Clients\Models\Wordstat_NResult.cs" />
     <Compile Include="Clients\MutagenClient.cs" />
+    <Compile Include="Clients\StatCreator.cs" />
     <Compile Include="Controllers\StatController.cs" />
     <Compile Include="Controllers\WordsController.cs" />
     <Compile Include="Global.asax.cs">

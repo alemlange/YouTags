@@ -41,9 +41,11 @@
     <Content Include="public\images\caret-up.png" />
     <Content Include="public\images\search-sm.png" />
     <Content Include="public\images\search.png" />
-    <Content Include="public\images\speedometer_bad_bg.png" />
-    <Content Include="public\images\speedometer_bg.png" />
-    <Content Include="public\images\speedometer.png" />
+    <Content Include="public\images\sm_b.png" />
+    <Content Include="public\images\sm_g.png" />
+    <Content Include="public\images\sm_md.png" />
+    <Content Include="public\images\sm_vb.png" />
+    <Content Include="public\images\sm_vg.png" />
     <Content Include="public\images\yt32.png" />
     <Content Include="README.md" />
   </ItemGroup>

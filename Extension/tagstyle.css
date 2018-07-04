@@ -80,6 +80,9 @@ a {
 
 .step-guidance {
     padding: 7px;
+    padding-left: 18px;
+    padding-right: 3px;
+    font-size: 16px;
 }
 
 .check-li {
@@ -145,13 +148,17 @@ a {
     margin: 0px 0px 10px 6px ;
 }
 
-.meter{
-    text-align:center;
+.videoc-img-meter {
+    transform: scaleX(-1);
+}
+
+.meter {
+    text-align: center;
 }
 
 .meter-count {
     font-size: 22px;
-    color: green;
+    /*color: green;*/
 }
 
 .popular-youtube {

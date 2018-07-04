@@ -111,3 +111,4 @@ C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.csprojResolveAssemblyRefe
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.csproj.CoreCompileInputs.cache
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.dll
 C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.pdb
+C:\git\YouTags\AdWordsService\obj\Debug\AdWordsService.csproj.CopyComplete

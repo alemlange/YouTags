@@ -1,4 +1,11 @@
-﻿$(document).ready(function () {
+﻿var imgUrl = "http://trendsnodeservice.azurewebsites.net/images/";
+var smMedium = imgUrl + "sm_md.png";
+var smBad = imgUrl + "sm_b.png";
+var smGood = imgUrl + "sm_g.png";
+var smVeryBad = imgUrl + "sm_vb.png";
+var smVeryGood = imgUrl + "sm_vg.png";
+
+$(document).ready(function () {
 
     function TopFiveTags(tagQuery, callback) {
         $.getJSON('https://www.googleapis.com/youtube/v3/search?key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&&maxResults=10&q=' + tagQuery + '&part=snippet&type=video', function (data) {
@@ -53,6 +60,8 @@
 
             var totalResults = data.pageInfo.totalResults;
             callback(tagQuery, topFiveTags, totalResults);
+
+            searchValueStats(tagQuery, totalResults);
         });
     }
 
@@ -70,8 +79,72 @@
         });
     }
 
-    function searchValueStats(query) {
-        $.getJSON('https://adwordsservice.azurewebsites.net/Stat/ParseKey?key=' + query, function (data) {
+    function searchValueStats(query, videoCount) {
+        $.getJSON('https://adwordsservice.azurewebsites.net/Stat/ParseKey/?key=' + query + "&videoc=" + videoCount, function (data) {
+
+            var curSVMeter = "";
+            var curVideoCMeter = "";
+            if (data != null) {
+
+                switch (data.SVQuality) {
+                    case 0:
+                        curSVMeter = smVeryBad;
+                        break;
+                    case 1:
+                        curSVMeter = smBad;
+                        break;
+                    case 2:
+                        curSVMeter = smMedium;
+                        break;
+                    case 3:
+                        curSVMeter = smGood;
+                        break;
+                    case 4:
+                        curSVMeter = smVeryGood;
+                        break;
+                }
+
+                switch (data.VideoCountQuality) {
+                    case 0:
+                        curVideoCMeter = smVeryBad;
+                        break;
+                    case 1:
+                        curVideoCMeter = smBad;
+                        break;
+                    case 2:
+                        curVideoCMeter = smMedium;
+                        break;
+                    case 3:
+                        curVideoCMeter = smGood;
+                        break;
+                    case 4:
+                        curVideoCMeter = smVeryGood;
+                        break;
+                }
+
+                $(".sv-img-meter").attr("src", curSVMeter);
+                $(".videoc-img-meter").attr("src", curVideoCMeter);
+
+                $(".meter-count").html(data.Points);
+
+                if (data.Points >= 0 && data.Points < 25) {
+                    $(".meter-count").css("color", "#f00");
+                }
+                else if (data.Points >= 25 && data.Points < 40) {
+                    $(".meter-count").css("color", "#ef7171");
+                }
+                else if (data.Points >= 40 && data.Points < 60) {
+                    $(".meter-count").css("color", "#ffdc28");
+                }
+                else if (data.Points >= 60 && data.Points < 70) {
+                    $(".meter-count").css("color", "#68f1ae");
+                }
+                else if (data.Points >= 70 && data.Points <= 100) {
+                    $(".meter-count").css("color", "#03a958");
+                }
+
+                $(".points-exp").html(data.Explanation);
+            }
 
             $(".search-value").find(".meter-count").html(data);
         });
@@ -159,8 +232,6 @@
             searchYandexAutoComplete(searchVal);
 
             relatedTrands(searchVal);
-
-            searchValueStats(searchVal);
 
         }
     }
