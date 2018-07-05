@@ -1,9 +1,15 @@
-﻿var imgUrl = "http://trendsnodeservice.azurewebsites.net/images/";
+﻿var imgUrl = "chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/";
 var smMedium = imgUrl + "sm_md.png";
 var smBad = imgUrl + "sm_b.png";
 var smGood = imgUrl + "sm_g.png";
 var smVeryBad = imgUrl + "sm_vb.png";
 var smVeryGood = imgUrl + "sm_vg.png";
+var caretDownImg = imgUrl + "caret-down.png";
+var caretUpImg = imgUrl + "caret-up.png";
+
+function diamondImg(count) {
+    return imgUrl + "d" + count + ".png";
+}
 
 $(document).ready(function () {
 
@@ -147,6 +153,9 @@ $(document).ready(function () {
             }
 
             $(".search-value").find(".meter-count").html(data);
+
+            $(".load-gif-container").hide();
+            $(".meters-container").show();
         });
     }
 
@@ -154,7 +163,7 @@ $(document).ready(function () {
 
         var TopFiveResult = "";
         for (var i in topFive) {
-            TopFiveResult += "<li>"+'\"' + topFive[i].value + '\"' + " встречается: " + topFive[i].count + "раз"+"</li>";
+            TopFiveResult += "<li>" + '\"' + topFive[i].value + '\"' + " : " + " <img class='diamond-rating' src='" + diamondImg(topFive[i].count) + "'>" + "</li>";
         }
         $(".popular-youtube").html(TopFiveResult);
 
@@ -223,6 +232,9 @@ $(document).ready(function () {
         $(".search-img-section").hide();
         $(".results").show();
 
+        $(".meters-container").hide();
+        $(".load-gif-container").show();
+
         var searchVal = $(".te-tag-input").val();
         if (searchVal != undefined && searchVal != "") {
             TopFiveTags(searchVal, showRes);
@@ -288,11 +300,11 @@ $(document).ready(function () {
             var text = $(container).find(".step");
 
             if (text.is(":visible")) {
-                container.find(".caret-down").attr("src", "http://trendsnodeservice.azurewebsites.net/images/caret-down.png");
+                container.find(".caret-down").attr("src", caretDownImg);
                 text.hide();
             }
             else {
-                container.find(".caret-down").attr("src", "http://trendsnodeservice.azurewebsites.net/images/caret-up.png");
+                container.find(".caret-down").attr("src", caretUpImg);
                 text.show();
             }   
         });
@@ -319,31 +331,5 @@ $(document).ready(function () {
     
 });
 
-        //var ctx = document.getElementById("myChart").getContext('2d');
-        //var myChart = new Chart(ctx, {
-        //    type: 'line',
-        //    data: {
-        //        labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
-        //        datasets: [{
-        //            label:"Популярность",
-        //            data: [12, 19, 3, 5, 2, 3],
-        //            backgroundColor:  'rgba(255, 99, 132, 0.2)',
-        //            borderColor: 'rgba(255,99,132,1)',
-
-        //            borderWidth: 2
-        //        }]
-        //    },
-        //    options: {
-        //        scales: {
-        //            yAxes: [{
-        //                ticks: {
-        //                    max: 100,
-        //                    min: 0,
-        //                    stepSize:20
-        //                }
-        //            }]
-        //        }
-        //    }
-        //});
 
     

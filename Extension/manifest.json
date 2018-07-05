@@ -31,5 +31,31 @@
     "128": "images/yt128.png"
   },
   "manifest_version": 2,
-  "web_accessible_resources": [ "tagview.html" ]
+  "web_accessible_resources": [
+    "tagview.html",
+    "images/search.png",
+    "images/caret-down.png",
+    "images/caret-up.png",
+    "images/d1.png",
+    "images/d2.png",
+    "images/d3.png",
+    "images/d4.png",
+    "images/d5.png",
+    "images/d6.png",
+    "images/d7.png",
+    "images/d8.png",
+    "images/d9.png",
+    "images/d10.png",
+    "images/load.gif",
+    "images/search-sm.png",
+    "images/sm_b.png",
+    "images/sm_g.png",
+    "images/sm_md.png",
+    "images/sm_vb.png",
+    "images/sm_vg.png",
+    "images/yt128.png",
+    "images/yt32.png",
+    "images/yt16.png",
+    "images/yt48.png"
+  ]
 }

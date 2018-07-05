@@ -39,6 +39,17 @@
     <Content Include="package.json" />
     <Content Include="public\images\caret-down.png" />
     <Content Include="public\images\caret-up.png" />
+    <Content Include="public\images\d1.png" />
+    <Content Include="public\images\d10.png" />
+    <Content Include="public\images\d2.png" />
+    <Content Include="public\images\d3.png" />
+    <Content Include="public\images\d4.png" />
+    <Content Include="public\images\d5.png" />
+    <Content Include="public\images\d6.png" />
+    <Content Include="public\images\d7.png" />
+    <Content Include="public\images\d8.png" />
+    <Content Include="public\images\d9.png" />
+    <Content Include="public\images\load.gif" />
     <Content Include="public\images\search-sm.png" />
     <Content Include="public\images\search.png" />
     <Content Include="public\images\sm_b.png" />
