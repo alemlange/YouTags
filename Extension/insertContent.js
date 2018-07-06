@@ -1,4 +1,4 @@
-﻿var imgUrl = "chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/";
+﻿var imgUrl = "chrome-extension://edmmcafakimkimmmgpgcogcjecfddhko/images/";
 var smMedium = imgUrl + "sm_md.png";
 var smBad = imgUrl + "sm_b.png";
 var smGood = imgUrl + "sm_g.png";
