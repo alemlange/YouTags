@@ -8,7 +8,7 @@
     border: 1px solid rgb(204, 204, 204);
     padding: 3px 12px 8px 12px;
     border-radius: 3px;
-    width: 350px;
+    width: 400px;
     height: 400px;
     /*overflow:hidden;*/
 }
@@ -70,7 +70,7 @@ a {
 }
 
 .step-title {
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -87,11 +87,6 @@ a {
 
 .check-li {
     margin-bottom:5px;
-}
-
-.trends-chart {
-    width: 500px !important;
-    height: 250px !important;
 }
 
 .control-panel {
@@ -111,7 +106,7 @@ a {
 }
 
 .te-tag-input {
-    width: 249px;
+    width: 299px;
     margin-right: 10px;
     height: 29px;
 }
@@ -130,7 +125,7 @@ a {
 
 .search-img-section {
     height: 313px;
-    width: 324px;
+    width: 374px;
     text-align: center;
     padding: 75px;
 }
@@ -170,59 +165,14 @@ a {
     /*color: green;*/
 }
 
-.popular-youtube {
+.bullet-list {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
     margin-left: 10px;
 }
 
-.popular-youtube li{
+.bullet-list li {
     margin-left: 20px;
+    margin-bottom: 10px;
 }
-
-.google-auto {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.google-auto li {
-    margin-left: 20px;
-}
-
-.youtube-auto {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.youtube-auto li {
-    margin-left: 20px;
-}
-
-.yandex-auto {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.yandex-auto li {
-    margin-left: 20px;
-}
-
-.google-trends {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.google-trends li {
-    margin-left: 20px;
-}
-
-
