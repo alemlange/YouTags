@@ -161,10 +161,13 @@
 
     <div id="tag-row" style="display: none;">
 
-        <div class="search-control">
-            <input class="te-tag-input" placeholder="Поиск тегов" />
-            <a class="te-find btn btn-sm btn-outline-secondary"></a>
+        <div class="search-section">
+            <div class="search-control">
+                <input class="te-tag-input" placeholder="Поиск тегов" />
+                <a class="te-find btn btn-sm btn-outline-secondary"></a>
+            </div>
         </div>
+
 
         <div class="search-img-section">
             <img class="search-img-big" src="chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/search.png">
@@ -174,15 +177,15 @@
 
         <div class="results" style="display: none;">
 
-            <div class="row result-section load-gif-container">
+            <div class="row load-gif-container box">
                 <div class="col-md-12 meter">
                     <img class="load-img" src="chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/load.gif">
                     <h3>Вычисляем статистику тега...</h3>
                 </div>
             </div>
 
-            <div class="meters-container" style="display: none;">
-                <div class="row result-section">
+            <div class="meters-container box" style="display: none;">
+                <div class="row speedometer-section">
                     <div class="col-md-6 meter search-value">
                         <h3>Объем поиска</h3>
                         <img class="sv-img-meter" src="chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/sm_md.png">
@@ -195,42 +198,51 @@
                 </div>
 
                 <div class="result-section">
-                    <h3>Рейтинг тега</h3>
                     <div class="row result-section">
-                        <div class="col-md-3">
-                            <span class="meter-count">..</span>
-                        </div>
+                        <div class="col-md-12">
+                            <h3>Рейтинг тега</h3>
+                            <div class="row">
+                                <div class="col-md-4">
 
-                        <div class="col-md-9">
-                            <p class="points-exp">Мало поиска средняя конкуренция</p>
+                                    <div class="meter-count">..</div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <p class="points-exp">Мало поиска средняя конкуренция</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="result-section">
-                <h3>Популярно на ютубе</h3>
-                <ul class="popular-youtube bullet-list"></ul>
+            <div class="row box">
+                <div class="pop-container col-md-6">
+                    <h3>Популярно на ютубе</h3>
+                    <div class="popular-youtube"></div>
+                </div>
+
+                <div class="pop-container col-md-6">
+                    <h3>Популярные тренды</h3>
+                    <div class="google-trends"></div>
+                </div>
             </div>
 
-            <div class="result-section">
-                <h3>Популярные тренды</h3>
-                <ul class="google-trends bullet-list"></ul>
-            </div>
+            <div class="row box">
+                <div class="col-md-4">
+                    <img src="chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/google.png">
+                    <ul class="google-auto "></ul>
+                </div>
 
-            <div class="result-section">
-                <h3>Гугл предлагает</h3>
-                <ul class="google-auto bullet-list"></ul>
-            </div>
+                <div class="col-md-4">
+                    <img src="chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/youtube.png">
+                    <ul class="youtube-auto "></ul>
+                </div>
 
-            <div class="result-section">
-                <h3>Ютуб Предлагает</h3>
-                <ul class="youtube-auto bullet-list"></ul>
-            </div>
-
-            <div class="result-section">
-                <h3>Яндекс предлагает</h3>
-                <ul class="yandex-auto bullet-list"></ul>
+                <div class="col-md-4">
+                    <img src="chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yandex.png">
+                    <ul class="yandex-auto "></ul>
+                </div>
             </div>
         </div>
     </div>

@@ -78,7 +78,7 @@ $(document).ready(function () {
             for (let i = 0; i < 5; i++) {
                 if (data.length <= i)
                     break;
-                topFiveTags += "<li>" + data[i].query + " " + data[i].value +"</li>";
+                topFiveTags += "<div class='element'>" + "<div class='popular-count'>" + data[i].value + "%</div>" + "<span>" + data[i].query + "</span>" + "</div>";
             }
 
             $(".google-trends").html(topFiveTags);
@@ -163,7 +163,7 @@ $(document).ready(function () {
 
         var TopFiveResult = "";
         for (var i in topFive) {
-            TopFiveResult += "<li>" + '\"' + topFive[i].value + '\"' + " : " + " <img class='diamond-rating' src='" + diamondImg(topFive[i].count) + "'>" + "</li>";
+            TopFiveResult += "<div class='element'>" + " <img class='diamond-rating' src='" + diamondImg(topFive[i].count) + "'>" + "<span>" + topFive[i].value + "</span>"  + "</div>";
         }
         $(".popular-youtube").html(TopFiveResult);
 
