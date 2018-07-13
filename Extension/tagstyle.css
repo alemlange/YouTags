@@ -1,16 +1,33 @@
+h3 {
+    font-size: 14px !important;
+}
+
 .te-explorer {
     position: fixed;
-    background-color: white;
+    background-color: rgb(241, 241, 241);
     top: 228px;
     left: 1303px;
     margin-left: -350px;
     z-index: 2100000003;
     border: 1px solid rgb(204, 204, 204);
-    padding: 3px 12px 8px 12px;
+    /*padding: 3px 12px 8px 12px;*/
     border-radius: 3px;
-    width: 350px;
+    width: 400px;
     height: 400px;
-    /*overflow:hidden;*/
+}
+
+.menu-btn {
+    height: 32px;
+    margin-right: 5px;
+    background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-btn:active {
+    background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
 .open-tags {
@@ -21,6 +38,14 @@
     background-repeat: no-repeat;
 }
 
+.box {
+    background-color: white;
+    padding: 13px;
+    margin: 0 0 10px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
 .check-container {
     border-right: black;
     border-right-style: groove;
@@ -29,7 +54,10 @@
 }
 
 .list-element {
-    margin-bottom: 8px;
+    background-color: white;
+    padding: 7px 7px;
+    margin: 0px 4px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
 
 a {
@@ -39,7 +67,7 @@ a {
 .section-link {
     margin-right: 10px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     color: rgba(0,0,0,0.5);
 }
 
@@ -49,7 +77,7 @@ a {
 }
 
 .section-link.active {
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     border-bottom-color: red;
     color: rgba(10,10,10,1);
     text-decoration: none
@@ -67,11 +95,13 @@ a {
     top: 4px;
     float: right;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .step-title {
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
+    color: rgb(10, 10, 10);
 }
 
 .step-checkbox {
@@ -89,18 +119,14 @@ a {
     margin-bottom:5px;
 }
 
-.trends-chart {
-    width: 500px !important;
-    height: 250px !important;
-}
-
 .control-panel {
-    /*width: 400px;*/
     line-height: 2;
-    border-bottom: solid 1px;
-    border-bottom-color:gray;
-    height: 25px;
-    margin-bottom: 15px;
+    height: 33px;
+    padding: 0px 13px 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+    border-bottom: none;
+    margin-bottom: 10px;
+    background-color: white;
 }
 
 .close-control {
@@ -110,8 +136,12 @@ a {
     margin-right:0px !important;
 }
 
+.search-section {
+    padding: 0px 10px 0px;
+}
+
 .te-tag-input {
-    width: 249px;
+    width: 274px;
     margin-right: 10px;
     height: 29px;
 }
@@ -126,13 +156,17 @@ a {
 
 .search-control {
     margin-bottom: 10px;
+    padding: 9px 12px 7px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
 
 .search-img-section {
-    height: 313px;
-    width: 324px;
+    margin: 0px 10px 0px;
     text-align: center;
     padding: 75px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
 
 .search-img-big {
@@ -142,6 +176,8 @@ a {
 .results {
     overflow: auto;
     height: 295px;
+    background-color: #f1f1f1;
+    padding: 10px;
 }
 
 .diamond-rating {
@@ -153,8 +189,28 @@ a {
     margin-top: 15px;
 }
 
-.result-section{
-    margin: 0px 0px 10px 6px ;
+.pop-container {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 0px;
+    text-align: center;
+}
+
+.speedometer-section {
+    margin: 0px 0px 0px 6px;
+}
+
+.rating-section {
+    margin: 0px 0px 0px 6px;
+}
+
+.popular-youtube {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.google-trends {
+    margin-top: 5px;
+    font-size: 15px;
 }
 
 .videoc-img-meter {
@@ -167,62 +223,36 @@ a {
 
 .meter-count {
     font-size: 22px;
+    text-align:center;
     /*color: green;*/
 }
 
-.popular-youtube {
+.element {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.popular-count {
+    font-size: 15px;
+    color: green;
+}
+
+.bullet-list {
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
     margin-left: 10px;
 }
 
-.popular-youtube li{
+.bullet-list li {
     margin-left: 20px;
+    margin-bottom: 10px;
 }
 
-.google-auto {
-    list-style-type: disc;
-    font-size: 14px;
+.auto-section{
+    padding: 0px 10px;
+}
+
+.auto-elem{
     margin-bottom: 5px;
-    margin-left: 10px;
 }
-
-.google-auto li {
-    margin-left: 20px;
-}
-
-.youtube-auto {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.youtube-auto li {
-    margin-left: 20px;
-}
-
-.yandex-auto {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.yandex-auto li {
-    margin-left: 20px;
-}
-
-.google-trends {
-    list-style-type: disc;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.google-trends li {
-    margin-left: 20px;
-}
-
-
