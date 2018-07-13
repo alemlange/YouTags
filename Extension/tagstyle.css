@@ -16,6 +16,20 @@ h3 {
     height: 400px;
 }
 
+.menu-btn {
+    height: 32px;
+    margin-right: 5px;
+    background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-btn:active {
+    background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
 .open-tags {
     height: 28px;
     width: 44px;
@@ -43,6 +57,7 @@ h3 {
     background-color: white;
     padding: 7px 7px;
     margin: 0px 4px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
 
 a {
@@ -80,11 +95,13 @@ a {
     top: 4px;
     float: right;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .step-title {
     font-size: 16px;
     cursor: pointer;
+    color: rgb(10, 10, 10);
 }
 
 .step-checkbox {
@@ -105,7 +122,7 @@ a {
 .control-panel {
     line-height: 2;
     height: 33px;
-    padding: 0px 13px 0px;
+    padding: 0px 13px 0px 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     border-bottom: none;
     margin-bottom: 10px;
@@ -182,6 +199,10 @@ a {
     margin: 0px 0px 0px 6px;
 }
 
+.rating-section {
+    margin: 0px 0px 0px 6px;
+}
+
 .popular-youtube {
     margin-top: 5px;
     font-size: 15px;
@@ -202,11 +223,13 @@ a {
 
 .meter-count {
     font-size: 22px;
+    text-align:center;
     /*color: green;*/
 }
 
-.element{
+.element {
     margin-top: 0px;
+    margin-bottom: 8px;
 }
 
 .popular-count {
@@ -224,4 +247,12 @@ a {
 .bullet-list li {
     margin-left: 20px;
     margin-bottom: 10px;
+}
+
+.auto-section{
+    padding: 0px 10px;
+}
+
+.auto-elem{
+    margin-bottom: 5px;
 }

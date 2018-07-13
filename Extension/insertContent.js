@@ -221,11 +221,10 @@ $(document).ready(function () {
         }
 
         for (let i in results) {
-            resString += "<li>" + results[i] +"</li>";
+            resString += "<li class='auto-elem'>" + results[i] +"</li>";
         }
 
         container.html(resString);
-
     }
 
     function performSearch() {
@@ -255,6 +254,12 @@ $(document).ready(function () {
 
         $(".open-tags").on("click", function () {
             $(".te-explorer").show();
+        });
+
+        $(".menu-btn").on("click", function (e) {
+            e.preventDefault();
+
+            $(".step-checkbox").prop('checked', false);
         });
 
         $(".te-find").on("click", function (e) {
