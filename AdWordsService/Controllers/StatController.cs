@@ -50,7 +50,7 @@ namespace AdWordsService.Controllers
                 videoc = 1;
 
             if (searchValueTrimmed == 0)
-                result = new ParserResult { Explanation="Такие теги никто не ищет:(", Points=0, SearchValue = realSv, VideoCount = videoc,SVQuality = SearchValueQuality.VeryBad, VideoCountQuality=VideoCountQuality.Average };
+                result = new ParserResult { Explanation="Такие теги никто не ищет, пробуйте иначе.", Points=0, SearchValue = realSv, VideoCount = videoc,SVQuality = SearchValueQuality.VeryBad, VideoCountQuality=VideoCountQuality.Average };
             else
             {
                 foreach (var column in matrix)
