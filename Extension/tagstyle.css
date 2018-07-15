@@ -19,13 +19,13 @@ h3 {
 .menu-btn {
     height: 32px;
     margin-right: 5px;
-    background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png");
+    background: url("chrome-extension://edmmcafakimkimmmgpgcogcjecfddhko/images/yt32.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .menu-btn:active {
-    background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png") !important;
+    background: url("chrome-extension://edmmcafakimkimmmgpgcogcjecfddhko/images/yt32.png") !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
 }
