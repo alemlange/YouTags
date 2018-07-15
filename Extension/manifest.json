@@ -1,6 +1,6 @@
 ﻿{
   "name": "YouTags",
-  "version": "0.9",
+  "version": "0.92",
   "description": "Помогает в создании видео",
   "permissions": [ "tabs", "declarativeContent", "storage", "https://suggestqueries.google.com/", "https://suggest.yandex.ru/", "https://trendsnodeservice.azurewebsites.net/", "https://adwordsservice.azurewebsites.net/" ],
   "background": {
