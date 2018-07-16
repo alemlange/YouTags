@@ -319,7 +319,12 @@ $(document).ready(function () {
         if (tries > 3)
             return;
 
-        var place = $("#yt-masthead-user");
+        //var place = $("#yt-masthead-user");
+        var place = $("#end");
+
+        if (place.length == 0) {
+            place = $("#yt-masthead-user");
+        }
 
         if (place.length != 0) {
             loadData(place, content);

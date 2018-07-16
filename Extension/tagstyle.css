@@ -18,6 +18,7 @@ h3 {
 
 .menu-btn {
     height: 32px;
+    width: 29px;
     margin-right: 5px;
     background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png");
     background-repeat: no-repeat;
@@ -36,6 +37,7 @@ h3 {
     background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png");
     background-position: 6px -2px;
     background-repeat: no-repeat;
+    border-color: rgba(0,0,0,0);
 }
 
 .box {
@@ -100,6 +102,7 @@ a {
 
 .step-title {
     font-size: 16px;
+    font-family: "YouTube Noto",Roboto,arial,sans-serif;
     cursor: pointer;
     color: rgb(10, 10, 10);
 }
@@ -109,6 +112,7 @@ a {
 }
 
 .step-guidance {
+    margin: 0;
     padding: 7px;
     padding-left: 18px;
     padding-right: 3px;
@@ -141,6 +145,8 @@ a {
 }
 
 .te-tag-input {
+    font-family: "YouTube Noto",Roboto,arial,sans-serif;
+    font-size: 13px;
     width: 274px;
     margin-right: 10px;
     height: 29px;
@@ -237,7 +243,12 @@ a {
     color: green;
 }
 
+.points-exp {
+    font-size: 13px;
+}
+
 .bullet-list {
+    padding-left: 0px;
     list-style-type: disc;
     font-size: 14px;
     margin-bottom: 5px;
@@ -253,6 +264,12 @@ a {
     padding: 0px 10px;
 }
 
-.auto-elem{
+.auto-list {
+    padding-left: 0px;
+}
+
+.auto-elem {
     margin-bottom: 5px;
+    list-style-type: none;
+    font-size: 13px;
 }
