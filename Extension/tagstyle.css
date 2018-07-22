@@ -34,6 +34,8 @@ h3 {
 .open-tags {
     height: 28px;
     width: 44px;
+    margin-left: 5px;
+    margin-right: 5px;
     background: url("chrome-extension://ebmbmnmdlbjooahbbkaeiggaebahhjfc/images/yt32.png");
     background-position: 6px -2px;
     background-repeat: no-repeat;
