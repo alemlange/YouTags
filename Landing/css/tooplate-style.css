@@ -123,16 +123,22 @@ p {
 .tm-section { min-height: 515px; }
 
 .tm-section-pad {
-	padding-top: 80px;
+	/*padding-top: 80px;*/
 	padding-bottom: 80px;
 }
 
 #tm-section-1 {	
-	background-image: url('../img/bg-img-1.jpg');	
-	height: 515px;
+	background-image: url('../img/screen.jpg');	
+	height: 750px;
 }
 
-#tm-section-5 { background-image: url('../img/bg-img-2.jpg'); }
+.inter_pic {
+    text-align:center;
+}
+
+#tm-section-5 {
+    background-image: url('../img/bg-img-2.jpg');
+}
 
 #tm-section-6 {
 	background-image: url('../img/bg-img-3.jpg');
