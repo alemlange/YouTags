@@ -6,8 +6,8 @@ h3 {
     position: fixed;
     background-color: rgb(241, 241, 241);
     top: 228px;
-    left: 1303px;
-    margin-left: -350px;
+    left: 50%;
+    margin-left: -200px;
     z-index: 2100000003;
     border: 1px solid rgb(204, 204, 204);
     /*padding: 3px 12px 8px 12px;*/
