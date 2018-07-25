@@ -1,3 +1,7 @@
+.te-explorer * {
+    box-sizing: border-box;
+}
+
 h3 {
     font-size: 14px !important;
 }
@@ -6,8 +10,8 @@ h3 {
     position: fixed;
     background-color: rgb(241, 241, 241);
     top: 228px;
-    left: 1303px;
-    margin-left: -350px;
+    left: 50%;
+    margin-left: -200px;
     z-index: 2100000003;
     border: 1px solid rgb(204, 204, 204);
     /*padding: 3px 12px 8px 12px;*/
@@ -35,9 +39,12 @@ h3 {
     height: 28px;
     width: 44px;
     background: url("chrome-extension://edmmcafakimkimmmgpgcogcjecfddhko/images/yt32.png");
+    margin-left: 5px;
+    margin-right: 5px;
     background-position: 6px -2px;
     background-repeat: no-repeat;
     border-color: rgba(0,0,0,0);
+    box-sizing: border-box;
 }
 
 .box {

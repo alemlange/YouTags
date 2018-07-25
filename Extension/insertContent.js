@@ -14,7 +14,7 @@ function diamondImg(count) {
 $(document).ready(function () {
 
     function TopFiveTags(tagQuery, callback) {
-        $.getJSON('https://www.googleapis.com/youtube/v3/search?key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&&maxResults=10&q=' + tagQuery + '&part=snippet&type=video', function (data) {
+        $.getJSON('https://www.googleapis.com/youtube/v3/search?key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&maxResults=10&relevanceLanguage=ru&regionCode=ru&q=' + tagQuery + '&part=snippet&type=video', function (data) {
 
             var allTags = [];
             var allIds = [];
