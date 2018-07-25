@@ -1,3 +1,7 @@
+.te-explorer * {
+    box-sizing: border-box;
+}
+
 h3 {
     font-size: 14px !important;
 }
@@ -40,6 +44,7 @@ h3 {
     background-position: 6px -2px;
     background-repeat: no-repeat;
     border-color: rgba(0,0,0,0);
+    box-sizing: border-box;
 }
 
 .box {

@@ -25,7 +25,7 @@ namespace AdWordsService.Clients
             matrix[0].VideoCountRow = firstVideoRow;
 
             //Второй столбец
-            matrix[1] = new SearchValueRow { MinSv = 1000, MaxSv = 10000, SVQuality = SearchValueQuality.Bad };
+            matrix[1] = new SearchValueRow { MinSv = 500, MaxSv = 2000, SVQuality = SearchValueQuality.Bad };
 
             var secondVideoRow = new VideoCount[5];
             secondVideoRow[0] = new VideoCount { Min = 0, Max = 1000, Points = 60, Explanation = "Мало кто так ищет, набор просмотров будет медленным но постоянным.", VideoCountQuality = VideoCountQuality.VeryGood };
@@ -36,7 +36,7 @@ namespace AdWordsService.Clients
             matrix[1].VideoCountRow = secondVideoRow;
 
             //Третий столбец
-            matrix[2] = new SearchValueRow { MinSv = 10000, MaxSv = 100000, SVQuality = SearchValueQuality.Average };
+            matrix[2] = new SearchValueRow { MinSv = 2000, MaxSv = 50000, SVQuality = SearchValueQuality.Average };
 
             var thirdVideoRow = new VideoCount[5];
             thirdVideoRow[0] = new VideoCount { Min = 0, Max = 1000, Points = 70, Explanation = "Низкая конкуренция при достаточном для набора просмотров уровне поиска. Используйте этот тег.", VideoCountQuality = VideoCountQuality.VeryGood };
@@ -47,7 +47,7 @@ namespace AdWordsService.Clients
             matrix[2].VideoCountRow = thirdVideoRow;
 
             //Четвертый столбец
-            matrix[3] = new SearchValueRow { MinSv = 100000, MaxSv = 500000, SVQuality = SearchValueQuality.Good };
+            matrix[3] = new SearchValueRow { MinSv = 50000, MaxSv = 300000, SVQuality = SearchValueQuality.Good };
 
             var fourthVideoRow = new VideoCount[5];
             fourthVideoRow[0] = new VideoCount { Min = 0, Max = 1000, Points = 80, Explanation = "Большой объем поиска и отсутствие конкуренции. Идеальный поисковой запрос. Используйте этот тег.", VideoCountQuality = VideoCountQuality.VeryGood };
@@ -58,7 +58,7 @@ namespace AdWordsService.Clients
             matrix[3].VideoCountRow = fourthVideoRow;
 
             //Пятый столбец
-            matrix[4] = new SearchValueRow { MinSv = 500000, MaxSv = 1000000, SVQuality = SearchValueQuality.VeryGood };
+            matrix[4] = new SearchValueRow { MinSv = 300000, MaxSv = 1000000, SVQuality = SearchValueQuality.VeryGood };
 
             var fithVideoRow = new VideoCount[5];
             fithVideoRow[0] = new VideoCount { Min = 0, Max = 1000, Points = 90, Explanation = "Успех обеспечен! Запредельный уровень поиска при нулевой конкуренции.", VideoCountQuality = VideoCountQuality.VeryGood };
