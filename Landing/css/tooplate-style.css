@@ -137,7 +137,7 @@ p {
 }
 
 #tm-section-5 {
-    background-image: url('../img/bg-img-2.jpg');
+    /*background-image: url('../img/photo2.png');*/
 }
 
 #tm-section-6 {
@@ -405,9 +405,10 @@ select.tm-select::-ms-expand { display: none; }
     justify-content: center;
 }
 
-.tm-bg-video { 
-	position: relative; 
-	/*padding-top: 515px;*/
+.tm-bg-video {
+    position: relative;
+    /*padding-top: 515px;*/
+    background-color: rgba(239, 239, 239, 0.4);
 }
 
 video {
