@@ -17,7 +17,7 @@ h3 {
     /*padding: 3px 12px 8px 12px;*/
     border-radius: 3px;
     width: 400px;
-    height: 400px;
+    height: 500px;
 }
 
 .menu-btn {
@@ -94,7 +94,7 @@ a {
 
 .steps-container {
     overflow: auto;
-    height: 340px;
+    height: 440px;
 }
 
 .caret-down {
@@ -175,9 +175,10 @@ a {
 }
 
 .search-img-section {
+    height: 370px;
+    padding: 130px 75px 130px 75px;
     margin: 0px 10px 0px;
     text-align: center;
-    padding: 75px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
@@ -188,7 +189,7 @@ a {
 
 .results {
     overflow: auto;
-    height: 295px;
+    height: 370px;
     background-color: #f1f1f1;
     padding: 10px;
 }
