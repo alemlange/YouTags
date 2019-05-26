@@ -26,7 +26,7 @@ exports.list_all_tasks = (req, res) => {
     }
 };
 
-exports.youtubeSearch = async (req, res) => {
+exports.youtubeSearch = (req, res) => {
     const query = req.query.query;
 
     const searchSettings = 'key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&maxResults=10&relevanceLanguage=ru&regionCode=ru&part=snippet&type=video';
@@ -34,17 +34,18 @@ exports.youtubeSearch = async (req, res) => {
     try {
         const searchUrl = encodeURI(`${youtubeSearchUrl}?${searchSettings}&q=${query}`);
 
-        const responce = await fetch(searchUrl);
-        const data = await responce.json();
-
-        res.json(data);
+        fetch(searchUrl).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            res.json(data);
+        });
     }
     catch (ex) {
         throw ex;
     }
 };
 
-exports.youtubeVideo = async (req, res) => {
+exports.youtubeVideo = (req, res) => {
     const id = req.query.id;
 
     const searchSettings = 'key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&fields=items(snippet(title,description,tags))&part=snippet';
@@ -52,10 +53,11 @@ exports.youtubeVideo = async (req, res) => {
     try {
         const searchUrl = encodeURI(`${youtubeVideoUrl}?${searchSettings}&id=${id}`);
 
-        const responce = await fetch(searchUrl);
-        const data = await responce.json();
-
-        res.json(data);
+        fetch(searchUrl).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            res.json(data);
+        });
     }
     catch (ex) {
         throw ex;
