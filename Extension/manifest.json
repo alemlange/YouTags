@@ -1,9 +1,9 @@
 ﻿{
   "name": "YouTags",
-  "version": "0.8",
+  "version": "1.01",
   "short_name": "Ютэгс",
-  "description": "Плагин для Ютуба, который упростит создание видо и поможет в подборе лучших тэгов. Чек-лист поможет вам не забывать обо всех важных этапах в публикации видео, а поиск тегов покажет вам все лучшии теги для использования в видео.",
-  "permissions": [ "tabs", "declarativeContent", "storage", "https://suggestqueries.google.com/", "https://suggest.yandex.ru/", "https://trendsnodeservice.azurewebsites.net/", "https://adwordsservice.azurewebsites.net/" ],
+  "description": "Плагин для Ютуба, который упростит создание видeо и поможет в подборе лучших тэгов.",
+  "permissions": [ "tabs", "declarativeContent", "storage", "https://suggestqueries.google.com/", "https://suggest.yandex.ru/", "https://trendsnodeservice.azurewebsites.net/", "https://adwordsservice.azurewebsites.net/", "https://www.googleapis.com/" ],
   "background": {
     "scripts": [ "background.js"],
     "persistent": false

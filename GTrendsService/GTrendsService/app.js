@@ -33,7 +33,7 @@ if (app.get('env') === 'development') {
     app.use(function (err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
-            message: err.message,
+            message: err.message+'223',
             error: err
         });
     });
@@ -44,8 +44,8 @@ if (app.get('env') === 'development') {
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
-        message: err.message,
-        error: {}
+        message: err.message + '50505',
+        error: err
     });
 });
 
