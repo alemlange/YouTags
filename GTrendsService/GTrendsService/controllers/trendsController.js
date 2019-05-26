@@ -37,7 +37,7 @@ exports.youtubeSearch = (req, res) => {
         fetch(searchUrl).then(function (response) {
             return response.json();
         }).then(function (data) {
-            res.json(data);
+            res.json(JSON.stringify(data));
         });
     }
     catch (ex) {
@@ -56,7 +56,7 @@ exports.youtubeVideo = (req, res) => {
         fetch(searchUrl).then(function (response) {
             return response.json();
         }).then(function (data) {
-            res.json(data);
+            res.json(JSON.stringify(data));
         });
     }
     catch (ex) {

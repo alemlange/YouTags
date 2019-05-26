@@ -14,7 +14,8 @@ function diamondImg(count) {
 $(document).ready(function () {
 
     function TopFiveTags(tagQuery, callback) {
-        $.getJSON('https://trendsnodeservice.azurewebsites.net/youtube-search?query=' + tagQuery, function (data) {
+        $.getJSON('https://trendsnodeservice.azurewebsites.net/youtube-search?query=' + tagQuery, function (dataString) {
+			var data = JSON.parse(dataString);
 
             var allTags = [];
             var allIds = [];
@@ -27,7 +28,8 @@ $(document).ready(function () {
                     async: false,
                     url: 'https://trendsnodeservice.azurewebsites.net/youtube-video?id=' + allIds[i],
                     dataType: "json",
-                    success: function (data) {
+                    success: function (dataString) {
+						var data = JSON.parse(dataString);
                         for (var i in data.items[0].snippet.tags) {
                             allTags.push(data.items[0].snippet.tags[i]);
                         }

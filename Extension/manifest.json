@@ -1,6 +1,6 @@
 ﻿{
   "name": "YouTags",
-  "version": "1.00",
+  "version": "1.20",
   "short_name": "Ютэгс",
   "description": "Плагин для Ютуба, который упростит создание видео и поможет в подборе лучших тэгов.",
   "permissions": [ "tabs", "declarativeContent", "storage", "https://suggestqueries.google.com/", "https://suggest.yandex.ru/", "https://trendsnodeservice.azurewebsites.net/", "https://adwordsservice.azurewebsites.net/" ],
