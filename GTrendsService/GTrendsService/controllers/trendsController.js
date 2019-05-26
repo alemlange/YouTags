@@ -1,7 +1,10 @@
 ﻿const googleTrends = require('google-trends-api');
+const fetch = require("node-fetch");
 
-exports.list_all_tasks = function (req, res) {
+const youtubeSearchUrl = 'https://www.googleapis.com/youtube/v3/search';
+const youtubeVideoUrl = 'https://www.googleapis.com/youtube/v3/videos';
 
+exports.list_all_tasks = (req, res) => {
     var keyword = req.query.keyword;
 
     try {
@@ -21,5 +24,42 @@ exports.list_all_tasks = function (req, res) {
     catch (ex) {
         return "Error";
     }
+};
 
+exports.youtubeSearch = (req, res) => {
+    const query = req.query.query;
+
+    const searchSettings = 'key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&maxResults=10&relevanceLanguage=ru&regionCode=ru&part=snippet&type=video';
+
+    try {
+        const searchUrl = encodeURI(`${youtubeSearchUrl}?${searchSettings}&q=${query}`);
+
+        fetch(searchUrl).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            res.json(data);
+        });
+    }
+    catch (ex) {
+        throw ex;
+    }
+};
+
+exports.youtubeVideo = (req, res) => {
+    const id = req.query.id;
+
+    const searchSettings = 'key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&fields=items(snippet(title,description,tags))&part=snippet';
+
+    try {
+        const searchUrl = encodeURI(`${youtubeVideoUrl}?${searchSettings}&id=${id}`);
+
+        fetch(searchUrl).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            res.json(data);
+        });
+    }
+    catch (ex) {
+        throw ex;
+    }
 };

@@ -14,7 +14,7 @@ function diamondImg(count) {
 $(document).ready(function () {
 
     function TopFiveTags(tagQuery, callback) {
-        $.getJSON('https://www.googleapis.com/youtube/v3/search?key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&maxResults=10&relevanceLanguage=ru&regionCode=ru&q=' + tagQuery + '&part=snippet&type=video', function (data) {
+        $.getJSON('https://trendsnodeservice.azurewebsites.net/youtube-search?query=' + tagQuery, function (data) {
 
             var allTags = [];
             var allIds = [];
@@ -25,7 +25,7 @@ $(document).ready(function () {
             for (let i in allIds) {
                 $.ajax({
                     async: false,
-                    url: 'https://www.googleapis.com/youtube/v3/videos?key=AIzaSyD8875J05trC_O6hssu5gDTRaM1ImKZEKU&fields=items(snippet(title,description,tags))&part=snippet&id=' + allIds[i],
+                    url: 'https://trendsnodeservice.azurewebsites.net/youtube-video?id=' + allIds[i],
                     dataType: "json",
                     success: function (data) {
                         for (var i in data.items[0].snippet.tags) {
