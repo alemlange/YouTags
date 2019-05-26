@@ -8,13 +8,14 @@ using AdWordsService.Clients;
 using AdWordsService.Clients.Models;
 using AdWordsService.Clients.Enums;
 using System.Threading;
+using System.Web.Script.Serialization;
 
 namespace AdWordsService.Controllers
 {
     public class StatController : ApiController
     {
         [HttpGet]
-        public ParserResult ParseKey(string key, int videoc)
+        public string ParseKey(string key, int videoc)
         {
             var client = new MutagenClient("7f8e40f8ad271c3cd65ccdce486a5be3");
 
@@ -71,7 +72,7 @@ namespace AdWordsService.Controllers
             if (result == null)
                 throw new Exception("Не удалось подобрать статистику");
 
-            return result;
+            return new JavaScriptSerializer().Serialize(result);
         }
 
     }

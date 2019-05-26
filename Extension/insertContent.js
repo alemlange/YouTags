@@ -88,7 +88,8 @@ $(document).ready(function () {
     }
 
     function searchValueStats(query, videoCount) {
-        $.getJSON('https://adwordsservice.azurewebsites.net/Stat/ParseKey/?key=' + query + "&videoc=" + videoCount, function (data) {
+        $.getJSON('https://adwordsservice.azurewebsites.net/Stat/ParseKey/?key=' + query + "&videoc=" + videoCount, function (dataString) {
+			var data = JSON.parse(dataString);
 
             var curSVMeter = "";
             var curVideoCMeter = "";
