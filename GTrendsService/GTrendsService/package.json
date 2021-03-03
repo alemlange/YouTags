@@ -17,7 +17,7 @@
     "google-trends-api": "^4.6.2",
     "morgan": "^1.7.0",
     "node-fetch": "^2.6.0",
-    "pug": "^2.0.0-beta6",
+    "pug": "^3.0.1",
     "serve-favicon": "^2.3.0"
   },
   "engines": {
